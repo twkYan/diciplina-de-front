@@ -1,0 +1,98 @@
+*{
+margin: 0px;
+padding: 0;
+font-family: roboto, sans-serif;
+}
+header {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 30px 0;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 17px;
+
+}
+
+
+.waves{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#sobremim{
+    height: 100vh;
+    text-align: center;
+    background-color: #003049;
+    color: white;
+}
+
+#texto-bio{
+    text-align: center;
+    position: relative;
+    top: 10%;
+    
+}
+
+.texto-bio> h1{
+    font-size: 100px;
+}
+
+.texto-bio> p{
+    max-width: 700px;
+    text-align: left;
+    padding: 20px 0;
+    margin-left: 32%;
+    
+}
+
+.minhafoto{
+    width: 300px;
+    height: 300px;
+    border-radius: 500px;
+    margin-top: 3%;
+
+}
+
+.texto-bio>#um-pouco-menor{
+    font-size: 50px;
+    margin-top: 300px;
+}
+
+#sobremim .texto-bio figure nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+#sobremim .texto-bio figure nav ul img{
+    width: 100px;
+    height: 120px;
+    display: inline;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.sejabemvindo{
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+
+
+
