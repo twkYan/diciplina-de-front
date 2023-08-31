@@ -12,6 +12,38 @@ header {
     text-align: center;
 }
 
+#header2{
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 30px 0;
+    position: relative;
+    height: auto;
+}
+
+.conteiner-form{
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    color: white;
+}
+
+#caixa-grande{
+    width: 200px;
+    height: 100px;
+}
+h3{
+    font-weight: normal;
+}
+#black-body{
+    background-color: rgb(29, 29, 29);
+}
+
+
+form{
+    text-align: left;
+    display: block;
+}
+
 nav ul{
     list-style: none;
     padding:0;
@@ -23,7 +55,13 @@ nav ul li{
     display: inline;
     margin-right: 20px;
     font-size: 17px;
+    transition: font-size 0.3s, text-shadow 0.3s;
 
+}
+
+li:hover{
+    font-size: 21px; 
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.594);
 }
 
 
@@ -41,10 +79,10 @@ nav ul li{
     color: white;
 }
 
-#texto-bio{
+.texto-bio{
     text-align: center;
     position: relative;
-    top: 10%;
+    top: 6%;
     
 }
 
@@ -55,22 +93,14 @@ nav ul li{
 .texto-bio> p{
     max-width: 700px;
     text-align: left;
-    padding: 20px 0;
-    margin-left: 32%;
+    margin-left: 20%;
     
 }
 
-.minhafoto{
-    width: 300px;
-    height: 300px;
-    border-radius: 500px;
-    margin-top: 3%;
-
-}
 
 .texto-bio>#um-pouco-menor{
     font-size: 50px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 #sobremim .texto-bio figure nav ul{
@@ -90,7 +120,27 @@ nav ul li{
 
 .sejabemvindo{
     font-size: 50px;
-    margin-top: 10px;
+    margin-top: 14%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    border-style: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.594);
+}
+button:active{
+    background-color: rgb(87, 87, 87);
 }
 
 
