@@ -3,7 +3,7 @@ margin: 0px;
 padding: 0;
 font-family: roboto, sans-serif;
 }
-header {
+#header-home {
     background-color: rgb(29, 29, 29);
     color: white;
     padding: 30px 0;
@@ -12,7 +12,8 @@ header {
     text-align: center;
 }
 
-#header2{
+
+.header2{
     background-color: rgb(29, 29, 29);
     color: white;
     padding: 30px 0;
@@ -105,6 +106,13 @@ form{
     right: 0;
 }
 
+.waves-config2{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 #sobremim{
     height: 100vh;
     text-align: center;
@@ -175,22 +183,42 @@ button:hover{
 button:active{
     background-color: rgb(87, 87, 87);
 }
-.conteiner-curso li{
+
+.conteiner-curso{
     width: 300px;
     height: 200px;
-    margin: 10% 0 0 30%;
+    margin: 10px 0 0 10px;
     background-color: rgb(45, 45, 45);
     border-radius: 30px;
     text-align: center;
     color: white;
     list-style: none;
     
+    
+}
+
+#sec-inline{
+    display: inline;
 }
 
 .conteiner-curso p{
     text-align: left;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.conteiner-projetos:first-child{
+    margin-top: 50px;
+}
+.conteiner-projetos{
+    width: 60%;
+    height: 300px;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 30px;
 }
 
 
