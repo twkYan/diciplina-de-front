@@ -1,0 +1,64 @@
+*{
+    font-family: "Roboto";
+    padding: 0;
+    margin: 0;
+}
+
+/*adiciona a imagem de fundo*/
+#sobre-nos{ 
+    min-height: 100vh;
+    background-image: url('img/mulheres-se-preparando-para-correr.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*configuracao da logo*/
+#imagem picture img{
+    width: 150px;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+/*configura os textos padrao*/
+#sobre-nos .texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+/*configura o h1*/
+#sobre-nos .texto h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+/*configuracao dos conteiners de conteudo*/
+.conteiner-content{
+    background-color: rgba(180, 180, 180, 0.363);
+    display: flex;
+    height: 500px;
+    min-width: 400px;
+    margin-top: 3rem;
+    margin-left:20rem;
+    
+    border-radius: 20px;
+    justify-content: center;
+
+}
+
+.texto-home{
+    color: white;
+    max-width: 300px;
+    padding-top: 2rem;
+    
+}
+
