@@ -20,19 +20,16 @@
 }
 
 /*configura os textos padrao*/
-#sobre-nos .texto{
+#sobre-nos .slogam{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: white;
+    font-size: 3rem;
     
 }
 
-/*configura o h1*/
-#sobre-nos .texto h1{
-    text-align: center;
-    font-size: 3rem;
-}
 
 #home{
     display: flex;
@@ -45,20 +42,67 @@
 .conteiner-content{
     background-color: rgba(180, 180, 180, 0.363);
     display: flex;
-    height: 500px;
+    height: 400px;
     min-width: 400px;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-left:20rem;
-    
+    margin-bottom: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     border-radius: 20px;
     justify-content: center;
+    
 
 }
 
 .texto-home{
     color: white;
     max-width: 300px;
-    padding-top: 2rem;
     
+    
+}
+
+#caixa-botao{
+    width: 250px;
+    height: 170px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5.7rem;
+}
+#caixa-botao h4{
+    margin-top: 2rem;
+    font-size: 23px;
+}
+
+#caixa-botao button{
+    min-width: 170px;
+    min-height: 50px;
+    border-style: none;
+    border-radius: 50px;
+    background-color: #1A869E;
+    color: white;
+    margin-top: 2.5rem;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+#standard1{
+    height: 30rem;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center ;
+}
+
+#standard2{
+    height: 30rem;
+    display: flex;
+    justify-content: center ;
 }
 
