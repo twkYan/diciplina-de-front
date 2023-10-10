@@ -135,5 +135,168 @@
     padding-top: 2rem;
 }
 
+/*cria o footer com 3rem de altura
+com display flex para centralizar os itens
+*/
+footer{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+/*deixa as imagens com 1remde distancia*/
+footer img{
+    margin-right: 1rem;
+}
+/*ajusta o tamanho das imagens dos icones*/
+#twitter{
+    width: 40px;
+}
+#instagram{
+    width: 35px;
+}
+#facebook{
+    width: 30px;
+}
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #sobre-nos{ 
+        min-height: 100vh;
+        background-image: url('img/mulheres-se-preparando-para-correr.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -270px;
+    }
+    
+    /*configuracao da logo*/
+    #imagem picture img{
+        width: 150px;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    /*configura os textos padrao*/
+    #sobre-nos .slogam{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 0.5rem  0 0.5rem;
+        color: white;
+        font-size: 1.5rem;
+        
+        
+    }
+    
+    
+    #home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+    /*configuracao dos conteiners de conteudo*/
+    .conteiner-content{
+        background-color: rgba(180, 180, 180, 0.363);
+        display: flex;
+        height: 500px;
+        min-width: 300px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 2rem 2rem 2rem 2rem;
+        border-radius: 20px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .texto-home{
+        color: white;
+        max-width: 300px;
+
+        
+        
+    }
+    
+    #caixa-botao{
+        width: 150px;
+        height: 70px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 1rem 2rem 1rem;
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+    #caixa-botao h4{
+        margin-top: 1rem;
+        font-size: 20px;
+    }
+    
+    #caixa-botao button{
+        min-width: 120px;
+        min-height: 30px;
+        border-style: none;
+        border-radius: 50px;
+        background-color: #1A869E;
+        color: white;
+        margin-top: 0;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    
+    #standard1{
+        height: 56vh;
+        background-color: #FBBA56;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    
+    #conteudo1{
+        height: 95%;
+        width: 99%;
+        display: flex;
+        justify-content: right;
+        color: white;
+        flex-direction: column;
+    }
+    #conteudo1 img{
+        border-radius: 40px;
+    }
+    #conteudo1 article{
+        margin: 10px 20px;
+    }
+    
+    #standard2{
+        height: 56vh;
+        background-color: #363C57;
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+    }
+    #conteudo2{
+        height: 95%;
+        width: 99%;
+        display: flex;
+        justify-content: right;
+        color: white;
+        flex-direction: column;
+    }
+    #conteudo2 img{
+        border-radius: 40px;
+    }
+    #conteudo2 article{
+        margin: 10px 20px;
+    }
+    }
+    
 
 
