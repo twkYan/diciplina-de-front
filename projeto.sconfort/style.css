@@ -20,7 +20,7 @@
     margin-top: 0.5rem;
 }
 
-/*configura os textos padrao*/
+/*configura o texto do slogam*/
 #sobre-nos .slogam{
     display: flex;
     align-items: center;
@@ -31,7 +31,8 @@
     
 }
 
-
+/*ajusta a div home para que seus filhos
+fiquem no scentro da tela*/
 #home{
     display: flex;
     align-items: center;
@@ -52,14 +53,14 @@
     border-radius: 20px;
     justify-content: center;
 }
-
+/*configura a largura maxima no texto da home*/
 .texto-home{
     color: white;
     max-width: 300px;
     
     
 }
-
+/*cria uma div que possui um botao, sem utilidade no momento*/
 #caixa-botao{
     width: 250px;
     height: 170px;
@@ -76,8 +77,8 @@
     margin-top: 2rem;
     font-size: 23px;
 }
-
-#caixa-botao button{
+/*configura o buttom de dentro da div*/
+#botao-site{
     min-width: 170px;
     min-height: 50px;
     border-style: none;
@@ -87,8 +88,13 @@
     margin-top: 2.5rem;
     font-size: 20px;
     text-transform: uppercase;
+    cursor: pointer;
 }
-
+/*configura um hover para o botao*/
+#botao-site:hover{
+    background-color: #363C57;
+}
+/*cria uma section*/
 #standard1{
     height: 70vh;
     background-color: #FBBA56;
@@ -97,7 +103,7 @@
     align-items: center;
     
 }
-
+/*div que contem o conteudo dentro da sectio amarela*/
 #conteudo1{
     height: 95%;
     width: 99%;
@@ -112,7 +118,7 @@
 #conteudo1 article{
     margin: 10px 20px;
 }
-
+/*cria outra section*/
 #standard2{
     height: 70vh;
     background-color: #363C57;
@@ -120,6 +126,7 @@
     justify-content: center ;
     align-items: center;
 }
+/*conteudo para essa outra section*/
 #conteudo2{
     height: 95%;
     width: 99%;
@@ -161,6 +168,7 @@ footer img{
     width: 30px;
 }
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /*ajusta a posisao da imagemde fundo*/
     #sobre-nos{ 
         min-height: 100vh;
         background-image: url('img/mulheres-se-preparando-para-correr.jpg');
@@ -176,7 +184,7 @@ footer img{
         margin-top: 0.5rem;
     }
     
-    /*configura os textos padrao*/
+    /*configura o texto do slogam*/
     #sobre-nos .slogam{
         display: flex;
         align-items: center;
