@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Tasks</h1>
+    <div>
+        <input type="text" id="taskInput" placeholder="New Task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        let tasks = [];
+        
+        document.onload = updateList()
+
+        function updateList() {
+            document.getElementById('taskList').innerHTML = ''
+
+            if(sessionStorage.getItem('tasks')) {
+                tasks = JSON.parse(sessionStorage.getItem('tasks'))
+
+                for(let i = 0; i < tasks.length; i++) {
+                    showTask(tasks[i].text, tasks[i].id)
+                }
+            }
+        }
+        
+
+        function addTask() {
+            let taskInput = document.getElementById('taskInput')
+            let taskText = taskInput.value.trim()
+
+            let taskId = Math.random().toString(36).substring(2, 15)
+
+            if(taskText != "") {
+                tasks.push({
+                    text: taskText,
+                    id: taskId
+                })
+
+                showTask(taskText, taskId)
+                taskInput.value = ''
+                saveTasks()
+            }
+        }
+
+        function showTask(text, id) {
+            let taskList = document.getElementById('taskList')
+            let taskItem = document.createElement('li')
+
+            taskItem.innerHTML = text
+
+            let removeButton = document.createElement('button')
+            removeButton.innerText = 'Remove'
+            removeButton.dataset.id = id
+
+            removeButton.onclick = function() {
+                removeTasks(this.dataset.id)
+            }
+
+            taskList.appendChild(taskItem)
+            taskItem.appendChild(removeButton)
+        }
+
+        function saveTasks() {
+            sessionStorage.setItem("tasks", JSON.stringify(tasks))
+        }
+
+        function removeTasks(taskId) {
+            let taskIndex = tasks.findIndex(task => task.id === taskId)
+            tasks.splice(taskIndex, 1)
+            
+            saveTasks()
+            updateList()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+#deputado{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    gap: 5px;
+}
+#dp{
+   border: solid black 1px;
+   display: flex;
+   align-items: center;
+}
+

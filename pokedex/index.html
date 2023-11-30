@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <div id="pokemonsDiv"></div>
+    <script>
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=150&offset=0")
+        .then(Response => Response.json())
+        .then(function(data){
+            let pokemonsDiv = document.getElementById("pokemonsDiv")
+            data.results.forEach(function(pokemon) {
+                fetch(pokemon.url)
+                .then(response => response.json())
+                .then(function(details) {
+                    let nome = document.createElement("p")
+                    nome.innerHTML = details.name
+                    pokemonsDiv.appendChild(nome)
+                    
+
+                })
+            })
+
+            
+
+ 
+        })
+    </script>
+
+</body>
+</html>

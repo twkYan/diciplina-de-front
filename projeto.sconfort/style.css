@@ -105,15 +105,17 @@ fiquem no scentro da tela*/
 }
 /*div que contem o conteudo dentro da sectio amarela*/
 #conteudo1{
-    height: 95%;
-    width: 99%;
-    
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: right;
     color: white;
 }
 #conteudo1 img{
     border-radius: 40px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
 }
 #conteudo1 article{
     margin: 10px 20px;
@@ -128,8 +130,8 @@ fiquem no scentro da tela*/
 }
 /*conteudo para essa outra section*/
 #conteudo2{
-    height: 95%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: left;
     color: white;
@@ -137,6 +139,8 @@ fiquem no scentro da tela*/
 #conteudo2 img{
     border-radius: 40px;
     padding-right: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 #conteudo2 article{
     padding-top: 2rem;
@@ -259,7 +263,6 @@ footer img{
     }
     
     #standard1{
-        height: 56vh;
         background-color: #FBBA56;
         display: flex;
         justify-content: center;
@@ -269,41 +272,50 @@ footer img{
     }
     
     #conteudo1{
-        height: 95%;
-        width: 99%;
+        height: 100%;
+        width: 100%;
         display: flex;
-        justify-content: right;
+        justify-content: center;
+        align-items: center;
         color: white;
         flex-direction: column;
     }
     #conteudo1 img{
+        max-width: 95%;
         border-radius: 40px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
     #conteudo1 article{
         margin: 10px 20px;
     }
     
     #standard2{
-        height: 56vh;
         background-color: #363C57;
         display: flex;
         justify-content: center ;
         align-items: center;
     }
     #conteudo2{
-        height: 95%;
-        width: 99%;
+        height: 100%;
+        width: 100%;
         display: flex;
-        justify-content: right;
+        justify-content: center;
+        align-items: center;
         color: white;
         flex-direction: column;
     }
     #conteudo2 img{
+        max-width: 95%;
         border-radius: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
     }
     #conteudo2 article{
         margin: 10px 20px;
     }
+    
     }
     
 

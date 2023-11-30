@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="openChat()" id="butao">
+        ABRIR CHAT
+    </button>
+   
+        <div  id="chat">
+            <div>
+                <ul id="mensagens">
+    
+                </ul>
+            </div>
+            <div id="imputEButton">
+                <input type="text" id="textInput">
+                <button onclick="adicionar()" id="invite">enviar</button>
+            </div>
+        </div>
+</body>
+<script>
+    let msg = [];
+    document.onload = atualizar();
+
+    function openChat(){
+        let chat = document.getElementById("chat")
+        chat.style.display = "flex"
+    }
+
+    
+
+    function atualizar() {
+        if (sessionStorage.getItem('msg')) {
+            msg = JSON.parse(sessionStorage.getItem('msg'))
+
+            for (let i = 0; i < msg.length; i++) {
+                exibir(msg[i].text, msg[i].id)
+            }
+        }
+    }
+
+    function adicionar() {
+        let textInput = document.getElementById("textInput")
+        let textoText = textInput.value.trim()
+
+        let textoId = Math.random().toString(36).substring(2, 15)
+
+        if (textoText != "") {
+            msg.push({
+                text: textoText,
+                id: textoId
+            })
+
+            exibir(textoText, textoId)
+            textInput.value = ""
+            salvar()
+        }
+    }
+textos
+    function exibir(text, id) {
+        let textoList = document.getElementById("mensagens")
+        let textoItem = document.createElement("li")
+
+        textoItem.innerText = text
+
+        textoList.appendChild(textoItem)
+    }
+
+    function salvar() {
+        sessionStorage.setItem("msg", JSON.stringify(msg))
+    }
+
+</script>
+</html>
