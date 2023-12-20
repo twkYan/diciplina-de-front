@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="aside">
+        <div>
+            <p id="logo">LotoSenac</p>
+        </div>
+        <select name="" id="tipoSorteio" onchange="sorteio()">
+            <option value="megasena">Megasena</option>
+            <option value="quina">Quina</option>
+            <option value="lotofacil">Lotofacil</option>
+            <option value="timemania">Timemania</option>
+            <option value="diadasorte">dia da sorte</option>
+        </select>
+        <div>
+            <h1 id="tema"></h1>
+            <p id="code"></p>
+            <p id="date"></p>
+        </div>
+    </div>
+    <div id="infoSorteio">
+        <h2 id="frase"></h2>
+    </div>
+    <script>
+        function sorteio() {
+            let tipo = document.getElementById("tipoSorteio").value;
+            let info = document.getElementById("infoSorteio");
+            let tema = document.getElementById("tema");
+            let aside = document.getElementById("aside");
+            let codigo = document.getElementById('code');
+            let frase = document.getElementById('frase')
+            let date = document.getElementById('date')
+            let divNumeros = document.createElement('div')
+            divNumeros.classList.add('divNum')
+            
+
+            fetch(`http://loteria.cronogramatds.online/sorteio/${tipo}`)
+                .then(response => response.json())
+                .then(function (data) {
+                    tema.innerHTML = data.tema;
+                    codigo.innerHTML = `Código do sorteio: ${data.numero}`;
+                    date.innerHTML = `data do sorteio: ${data.data}` ;
+                    
+                    console.log(data)
+
+                    switch (tipo) {
+                        case 'megasena':
+                            aside.style.backgroundColor = '#1fdb67';
+                            break;
+                        case 'quina':
+                            aside.style.backgroundColor = '#a643f7';
+                            break;
+                        case 'lotofacil':
+                            aside.style.backgroundColor = '#fa52d6';
+                            break;
+                        case 'timemania':
+                            aside.style.backgroundColor = '#5287fa';
+                            break;
+                        case 'diadasorte':
+                            aside.style.backgroundColor = '#a88a63';
+                            break;
+                        default:
+                            aside.style.backgroundColor = ''; // Padrão
+                            break;
+                    }
+
+                    data.numerosSorteados.forEach(function (numero) {
+                        let containerNum = document.createElement('div')
+                        containerNum.classList.add('containerNum')
+                        let num = document.createElement('p')
+                        num.classList.add('num')
+                        num.innerHTML = numero
+                        divNumeros.appendChild(containerNum)
+                        containerNum.appendChild(num);
+                        
+                    });
+
+                    
+
+                    info.innerHTML = '';
+                    frase.innerHTML = `Numeros Sorteados`
+                    info.appendChild(frase)
+                    info.appendChild(divNumeros);
+                })
+                .catch(error => {
+                    console.error("Erro na requisição à API:", error);
+                });
+        }
+    </script>
+</body>
+
+</html>
